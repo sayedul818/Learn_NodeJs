@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Cox's Bazar",
+    "country": "Bangladesh",
+    "type": "Beach"
+  },
+  {
+    "name": "Sundarbans",
+    "country": "Bangladesh",
+    "type": "Forest"
+  },
+  {
+    "name": "Meiji Shrine",
+    "country": "Japan",
+    "type": "Temple"
+  },
+  {
+    "name": "Eiffel Tower",
+    "country": "France",
+    "type": "Landmark"
+  },
+  {
+    "name": "bandorban",
+    "country": "Bangladesh",
+    "type": "Forest",
+    "createdAt": "29/06/2025, 2:48:55 PM"
+  },
+  {
+    "name": "bandorban",
+    "country": "Bangladesh",
+    "type": "Forest",
+    "createdAt": "29/06/2025, 2:49:00 PM"
+  }
+]
