@@ -33,17 +33,15 @@ server.listen(4990,"127.0.0.1",()=>{
 
 const http = require("http");
 const path = require("path");
-const fs = require("fs");
-const { json } = require("stream/consumers");
 
 const filePath = path.join(__dirname, "./db/todo.json")
 
 const server = http.createServer((req, res) => {
 
-    const data = fs.readFileSync(filePath, { encoding: "utf-8" })
-
+    
     // GET all todos
-    if (req.url === "/checklist" & req.method === "GET") {
+    if (req.url === "/checkitems" & req.method === "GET") {
+        const data = fs.readFileSync(filePath, { encoding: "utf-8" })
         res.writeHead(200, {
             "content-type": "application/json",
         })
@@ -53,7 +51,7 @@ const server = http.createServer((req, res) => {
         // res.end(`<h1>hello world</h1>  <h2>hello world</h2>  <h3>hello world</h3> `)
 
     // POST all ToDos
-    } else if (req.url === "/checklist/createlist" && req.method === "POST") {
+    } else if (req.url === "/checkitems/createitem" && req.method === "POST") {
 
         let data=""
         req.on("data",(chunk)=>{
@@ -77,8 +75,8 @@ const server = http.createServer((req, res) => {
         res.end("the rout is not exist!");
     }
 })
-server.listen(4990, "127.0.0.1", () => {
+server.listen(4990, "127.0.0.1"), () => {
     console.log("server listening to port 4990");
-})
+}
 
 
